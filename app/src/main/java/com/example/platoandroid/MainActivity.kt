@@ -100,7 +100,7 @@ class MainActivity : ComponentActivity() {
              * it's just so you can leave helpful notes like this one :)
              */
             // YOUR TEST AREA vvv
-
+            Log.d( "My_LOG_TAG","my log message")
             // ^^^^^ add above ^^^^^
             // ^^^ YOUR TEST AREA
           }
