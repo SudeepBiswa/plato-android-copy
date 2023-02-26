@@ -54,6 +54,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+
 // ^^^
 /**
  * This section between the commented arrows below are examples
@@ -99,6 +100,13 @@ class MainActivity : ComponentActivity() {
              * text that follows it is a comment. This text won't run like code,
              * it's just so you can leave helpful notes like this one :)
              */
+            Text(text="Hello World")
+            Button(onClick={/*TODO*/}){
+              Text(text="BUTTON");
+            }
+
+
+
             // YOUR TEST AREA vvv
             Log.d( "My_LOG_TAG","my log message")
             // ^^^^^ add above ^^^^^
@@ -109,6 +117,8 @@ class MainActivity : ComponentActivity() {
     }
   }
 }
+
+annotation class ExperimentalMaterial3Api
 
 /**
  * We won't talk to much about previews throughout this tutorial but
