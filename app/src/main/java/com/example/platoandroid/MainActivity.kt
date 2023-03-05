@@ -47,13 +47,17 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.Button
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Star
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.Role.Companion.Checkbox
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 
 // ^^^
 /**
@@ -84,6 +88,7 @@ import com.example.platoandroid.ui.theme.PlatoAndroidTheme
  * https://developer.android.com/guide/components/activities/intro-activities
  */
 class MainActivity : ComponentActivity() {
+  @OptIn(ExperimentalMaterial3Api::class)
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContent {
@@ -105,6 +110,18 @@ class MainActivity : ComponentActivity() {
               Text(text="BUTTON");
             }
 
+
+            val checkedState = remember { mutableStateOf(true) }
+            Checkbox(
+              checked = checkedState.value,
+              onCheckedChange = { checkedState.value = it }
+            )
+
+            Card {
+              Text("This is a card apparently")
+            }
+
+            TodoList(title = "My Todo List")
 
 
             // YOUR TEST AREA vvv
