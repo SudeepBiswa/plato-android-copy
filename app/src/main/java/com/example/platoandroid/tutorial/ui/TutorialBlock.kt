@@ -19,7 +19,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.createSavedStateHandle
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.platoandroid.tutorial.model.TutorialSubStepBlockState
+import com.example.platoandroid.data.model.TutorialSubStepBlockState
 import com.example.platoandroid.tutorial.ui.MainDialog
 import com.example.platoandroid.tutorial.ui.TutorialNavBar
 import com.example.platoandroid.tutorial.viewmodel.TutorialRunnerViewModel
@@ -62,7 +62,7 @@ fun TutorialBlock() {
       modifier = Modifier.padding(all = 16.dp)
     ) {
       when (tutorialSubStep) {
-        is TutorialSubStepBlockState -> (tutorialSubStep as TutorialSubStepBlockState).displayBlock(onHelpRequest = {request -> dialogState.value = request}) { tutorialViewModel.goToNextStep() }
+        is TutorialSubStepBlockState -> (tutorialSubStep as TutorialSubStepBlockState).displayBlock(onHelpRequest = { request -> dialogState.value = request}) { tutorialViewModel.goToNextStep() }
         else -> tutorialStep?.getUiState()?.displayBlock(onHelpRequest = {request -> dialogState.value = request}) { tutorialViewModel.goToNextStep() }
       }
     }

@@ -11,7 +11,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.platoandroid.tutorial.model.TutorialSubStepBlockState
+import com.example.platoandroid.data.model.TutorialSubStepBlockState
 import com.example.platoandroid.tutorial.ui.TutorialStepCard
 import com.example.platoandroid.tutorial.ui.displaysteps.composebasics.help.DebuggingMyFirstComposableHint
 import com.example.platoandroid.tutorial.ui.displaysteps.help.HelpButton

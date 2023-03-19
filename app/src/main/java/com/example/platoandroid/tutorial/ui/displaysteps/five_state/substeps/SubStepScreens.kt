@@ -16,7 +16,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontWeight.Companion
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.example.platoandroid.tutorial.model.TutorialSubStepBlockState
+import com.example.platoandroid.data.model.TutorialSubStepBlockState
 import com.example.platoandroid.tutorial.ui.TutorialStepCard
 import com.example.platoandroid.tutorial.ui.displaysteps.five_state.help.RememberSyntaxExplained
 import com.example.platoandroid.tutorial.ui.displaysteps.five_state.help.StepEightHelpHint

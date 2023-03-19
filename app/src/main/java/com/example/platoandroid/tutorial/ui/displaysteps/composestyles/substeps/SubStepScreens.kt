@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.font.FontWeight.Companion
 import androidx.compose.ui.unit.dp
-import com.example.platoandroid.tutorial.model.TutorialSubStepBlockState
+import com.example.platoandroid.data.model.TutorialSubStepBlockState
 import com.example.platoandroid.tutorial.ui.TutorialStepCard
 import com.example.platoandroid.tutorial.ui.displaysteps.composestyles.help.ColorNotUpdatingHint
 import com.example.platoandroid.tutorial.ui.displaysteps.composestyles.help.FindingWhatPropertiesACompoableHas

@@ -4,8 +4,8 @@ import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import com.example.platoandroid.tutorial.model.TutorialStepUiState
-import com.example.platoandroid.tutorial.model.TutorialSubStep
+import com.example.platoandroid.data.model.TutorialStepUiState
+import com.example.platoandroid.data.model.TutorialSubStep
 import com.example.platoandroid.tutorial.ui.TutorialStepCard
 
 class WelcomeTutorialStepBlock: TutorialStepUiState {

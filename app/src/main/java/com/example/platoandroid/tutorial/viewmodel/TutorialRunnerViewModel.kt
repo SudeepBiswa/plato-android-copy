@@ -5,10 +5,10 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.example.platoandroid.tutorial.model.TutorialStep
-import com.example.platoandroid.tutorial.model.TutorialStep.Companion.WELCOME_STEP_ID
-import com.example.platoandroid.tutorial.model.TutorialStep.Companion.getFromId
-import com.example.platoandroid.tutorial.model.TutorialStep.Welcome
+import com.example.platoandroid.data.model.TutorialStep
+import com.example.platoandroid.data.model.TutorialStep.Companion.WELCOME_STEP_ID
+import com.example.platoandroid.data.model.TutorialStep.Companion.getFromId
+import com.example.platoandroid.data.model.TutorialStep.Welcome
 
 class TutorialRunnerViewModel(
   private val sharedPreferences: SharedPreferences,

@@ -1,4 +1,4 @@
-package com.example.platoandroid.tutorial.model
+package com.example.platoandroid.data.model
 
 import androidx.compose.runtime.Composable
 

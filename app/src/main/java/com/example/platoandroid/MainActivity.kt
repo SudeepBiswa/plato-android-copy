@@ -105,21 +105,21 @@ class MainActivity : ComponentActivity() {
              * text that follows it is a comment. This text won't run like code,
              * it's just so you can leave helpful notes like this one :)
              */
-            Text(text="Hello World")
-            Button(onClick={/*TODO*/}){
-              Text(text="BUTTON");
-            }
+           // Text(text="Hello World")
+            //Button(onClick={/*TODO*/}){
+              //Text(text="BUTTON");
+           // }
 
 
-            val checkedState = remember { mutableStateOf(true) }
-            Checkbox(
-              checked = checkedState.value,
-              onCheckedChange = { checkedState.value = it }
-            )
+            //val checkedState = remember { mutableStateOf(true) }
+           //Checkbox(
+              //checked = checkedState.value,
+              //onCheckedChange = { checkedState.value = it }
+            //)
 
-            Card {
-              Text("This is a card apparently")
-            }
+            //Card {
+              //Text("This is a card apparently")
+            //}
 
             TodoList(title = "My Todo List")
 

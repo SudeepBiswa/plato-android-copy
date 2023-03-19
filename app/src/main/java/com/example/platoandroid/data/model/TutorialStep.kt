@@ -1,4 +1,4 @@
-package com.example.platoandroid.tutorial.model
+package com.example.platoandroid.data.model
 
 import androidx.lifecycle.MutableLiveData
 import com.example.platoandroid.tutorial.ui.displaysteps.DefaultTutorialStepUiState
@@ -67,102 +67,102 @@ sealed class TutorialStep {
   }
 
   data class Welcome(
-    override val nextStep: TutorialStep = Intro(),
-    override val id: String = WELCOME_STEP_ID,
+      override val nextStep: TutorialStep = Intro(),
+      override val id: String = WELCOME_STEP_ID,
   ) : TutorialStep() {
     override fun getUiState(): TutorialStepUiState = WelcomeTutorialStepBlock()
   }
 
   data class Intro(
-    override val nextStep: TutorialStep = LearningComposeBasics(),
-    override val id: String = INTRO_STEP_ID,
+      override val nextStep: TutorialStep = LearningComposeBasics(),
+      override val id: String = INTRO_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = Welcome(this)
     override fun getUiState(): TutorialStepUiState = IntroTutorialStepBlock()
   }
 
   data class LearningComposeBasics(
-    override val nextStep: TutorialStep = LearningComposeStyles(),
-    override val id: String = COMPOSE_BASICS_STEP_ID,
+      override val nextStep: TutorialStep = LearningComposeStyles(),
+      override val id: String = COMPOSE_BASICS_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = Intro(this)
     override fun getUiState(): TutorialStepUiState = LearningComposeBasicsTutorialStepUiState()
   }
 
   data class LearningComposeStyles(
-    override val nextStep: TutorialStep = LearningDataTypes(),
-    override val id: String = COMPOSE_STYLES_STEP_ID,
+      override val nextStep: TutorialStep = LearningDataTypes(),
+      override val id: String = COMPOSE_STYLES_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningComposeBasics(this)
     override fun getUiState(): TutorialStepUiState = ComposeStylesTutorialStepUiState()
   }
 
   data class LearningDataTypes(
-    override val nextStep: TutorialStep = LearningButtonHandlers(),
-    override val id: String = DATA_TYPES_STEP_ID,
+      override val nextStep: TutorialStep = LearningButtonHandlers(),
+      override val id: String = DATA_TYPES_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningComposeBasics(this)
     override fun getUiState(): TutorialStepUiState = DataTypesTutorialStepUiState()
   }
 
   data class LearningButtonHandlers(
-    override val nextStep: TutorialStep = LearningState(),
-    override val id: String = BUTTONS_STEP_ID,
+      override val nextStep: TutorialStep = LearningState(),
+      override val id: String = BUTTONS_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningDataTypes(this)
     override fun getUiState(): TutorialStepUiState = ButtonsTutorialStepUiState()
   }
 
   data class LearningState(
-    override val nextStep: TutorialStep = LearningViewModels(),
-    override val id: String = STATE_STEP_ID,
+      override val nextStep: TutorialStep = LearningViewModels(),
+      override val id: String = STATE_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningButtonHandlers(this)
     override fun getUiState(): TutorialStepUiState = StateTutorialStepUiState()
   }
 
   data class LearningViewModels(
-    override val nextStep: TutorialStep = LearningTextFields(),
-    override val id: String = VIEW_MODELS_STEP_ID,
+      override val nextStep: TutorialStep = LearningTextFields(),
+      override val id: String = VIEW_MODELS_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningState(this)
     override fun getUiState(): TutorialStepUiState = ViewModelsTutorialStepUiState()
   }
 
   data class LearningTextFields(
-    override val nextStep: TutorialStep = LearningArchitecture(),
-    override val id: String = TEXT_FIELDS_STEP_ID,
+      override val nextStep: TutorialStep = LearningArchitecture(),
+      override val id: String = TEXT_FIELDS_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningViewModels(this)
     override fun getUiState(): TutorialStepUiState = TextFieldsTutorialStepUiState()
   }
 
   data class LearningArchitecture(
-    override val nextStep: TutorialStep = LearningGradle(),
-    override val id: String = ARCHITECTURE_STEP_ID,
+      override val nextStep: TutorialStep = LearningGradle(),
+      override val id: String = ARCHITECTURE_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningTextFields(this)
     override fun getUiState(): TutorialStepUiState = ArchitechtureTutorialStepUiState()
   }
 
   data class LearningGradle(
-    override val nextStep: TutorialStep = LearningFileStructure(),
-    override val id: String = GRADLE_STEP_ID,
+      override val nextStep: TutorialStep = LearningFileStructure(),
+      override val id: String = GRADLE_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningArchitecture(this)
     override fun getUiState(): TutorialStepUiState = GradleTutorialStepUiState()
   }
 
   data class LearningFileStructure(
-    override val nextStep: TutorialStep = LearningActivities(),
-    override val id: String = FILE_STRUCTURE_STEP_ID,
+      override val nextStep: TutorialStep = LearningActivities(),
+      override val id: String = FILE_STRUCTURE_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningGradle(this)
     override fun getUiState(): TutorialStepUiState = FileStructureTutorialStepUiState()
   }
 
   data class LearningActivities(
-    override val id: String = ACTIVITIES_STEP_ID,
+      override val id: String = ACTIVITIES_STEP_ID,
   ) : TutorialStep() {
     override val previousStep: TutorialStep = LearningFileStructure(this)
     override fun getUiState(): TutorialStepUiState = ActivitiesTutorialStepUiState()

@@ -7,8 +7,8 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.example.platoandroid.tutorial.model.TutorialStepUiState
-import com.example.platoandroid.tutorial.model.TutorialSubStep
+import com.example.platoandroid.data.model.TutorialStepUiState
+import com.example.platoandroid.data.model.TutorialSubStep
 import com.example.platoandroid.tutorial.ui.TutorialStepCard
 import com.example.platoandroid.tutorial.ui.displaysteps.seven_architechture.substeps.ArchitectureSupStepEight
 import com.example.platoandroid.tutorial.ui.displaysteps.seven_architechture.substeps.ArchitectureSupStepFive

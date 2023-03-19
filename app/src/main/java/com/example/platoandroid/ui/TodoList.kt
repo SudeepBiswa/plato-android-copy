@@ -106,8 +106,20 @@ fun TodoList(title: String) {
   Column() {
     Title(title = title)
     // We need to add some to-do items here below vvv
+   TodoListRow(taskName = "First Task");
+    TodoListRow(taskName = "Second Task");
+    TodoListRow(taskName = "Third Task");
 
     // ^^^ Add to-do list items above
+      Row {
+          TextField(value = "", onValueChange = {})
+
+          Spacer(modifier = Modifier.width(12.dp))
+
+          Button(onClick = {/*TODO*/ }) {
+              Text(text = "ADD ITEM");
+          }
+      }
   }
 }
 
@@ -119,3 +131,26 @@ fun Title(title: String) {
 }
 
 // Create a new composable here vvv
+@Composable
+fun TodoListRow(taskName: String){
+    var isComplete: Boolean = false;
+  Row {
+      if(isComplete) {
+          IconButton(onClick = { /*TODO*/ }) {
+              Icon(
+                  imageVector = Icons.Filled.CheckCircle,
+                  contentDescription = "Checkmark",
+              )
+          }
+      }
+    Spacer(modifier = Modifier.width(12.dp))
+    Text(text = taskName)
+      IconButton(onClick = { /*TODO*/ }) {
+          Icon(
+              imageVector = Icons.Filled.CheckCircle,
+              contentDescription = "Checkmark",
+          )
+      }
+  }
+    Divider()
+}
